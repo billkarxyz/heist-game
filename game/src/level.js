@@ -55,16 +55,33 @@ export function buildLevel() {
 
   // Paintings and plants are decoration only: they never block sight.
   const paintings = [
-    { x: 60, y: 18, w: 90, h: 8, tint: '#8a5a2b' },
-    { x: 190, y: 18, w: 90, h: 8, tint: '#2b5a8a' },
-    { x: 1000, y: 18, w: 90, h: 8, tint: '#5a2b8a' },
-    { x: 1130, y: 18, w: 90, h: 8, tint: '#8a2b2b' },
-    { x: 18, y: 120, w: 8, h: 90, tint: '#2b8a5a' },
-    { x: 1254, y: 120, w: 8, h: 90, tint: '#8a5a2b' },
+    { x: 60, y: 18, w: 90, h: 8, tint: '#b07a3a' },
+    { x: 190, y: 18, w: 90, h: 8, tint: '#3a7ab0' },
+    { x: 340, y: 18, w: 90, h: 8, tint: '#7a3ab0' },
+    { x: 850, y: 18, w: 90, h: 8, tint: '#b03a3a' },
+    { x: 1000, y: 18, w: 90, h: 8, tint: '#7a3ab0' },
+    { x: 1130, y: 18, w: 90, h: 8, tint: '#b03a3a' },
+    { x: 18, y: 120, w: 8, h: 90, tint: '#3ab07a' },
+    { x: 1254, y: 120, w: 8, h: 90, tint: '#b07a3a' },
+    { x: 304, y: 60, w: 8, h: 70, tint: '#b03a7a' },
+    { x: 968, y: 60, w: 8, h: 70, tint: '#3ab0b0' },
   ];
   const plants = [
     { x: 60, y: 640 }, { x: 1220, y: 640 }, { x: 340, y: 660 },
     { x: 940, y: 660 }, { x: 60, y: 340 }, { x: 1220, y: 340 },
+    { x: 320, y: 340 }, { x: 960, y: 340 }, { x: 170, y: 620 }, { x: 1110, y: 620 },
+  ];
+
+  // Rugs and statues are decoration only: they fill the empty floor so no
+  // corner of the hall reads as dead space. They never block sight or move.
+  const rugs = [
+    { x: 60, y: 380, w: 180, h: 120 },
+    { x: 1040, y: 380, w: 180, h: 120 },
+    { x: 300, y: 630, w: 240, h: 50 },
+    { x: 740, y: 630, w: 240, h: 50 },
+  ];
+  const statues = [
+    { x: 60, y: 200 }, { x: 1220, y: 200 }, { x: 250, y: 620 }, { x: 1030, y: 620 },
   ];
 
   // 24 treasures: 8 gems on cases, 8 coins on pedestals, 7 gold bars,
@@ -116,6 +133,8 @@ export function buildLevel() {
     shadows,
     paintings,
     plants,
+    rugs,
+    statues,
     loot,
     guards,
     cameras,

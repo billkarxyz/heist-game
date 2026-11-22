@@ -50,17 +50,18 @@ export function stageShot(game, n) {
   game.sounds.muted = true;
 
   if (n === 1) {
-    // COVER: the thief mid-hall, cones crossing, cameras live, loot out.
-    game.alarm = 45;
+    // COVER: the thief frozen on the carpet below the vault, Lena's cone
+    // sweeping down over them, alarm at 62% — a moment of tension.
+    game.alarm = 62;
     game.lives = 3;
-    takeLoot(game, ['gem-0', 'coin-0', 'coin-1', 'bar-6', 'coin-5']);
-    posePlayer(game, 700, 470, 180, true);
+    takeLoot(game, ['gem-4', 'coin-3', 'coin-4', 'coin-6', 'coin-7', 'bar-4', 'bar-5']);
+    posePlayer(game, 640, 310, -90, true);
+    poseGuard(game, 'Lena', 640, 220, 90, 'suspicious', 78);
+    poseGuard(game, 'Viktor', 560, 200, 45, 'patrol', 20);
+    poseGuard(game, 'Nadia', 760, 130, 180, 'patrol', 30);
     poseGuard(game, 'Marco', 420, 450, 0, 'patrol', 12);
-    poseGuard(game, 'Lena', 640, 300, 90, 'suspicious', 62);
     poseGuard(game, 'Rosa', 880, 560, 180, 'patrol', 8);
     poseGuard(game, 'Felix', 760, 640, 180, 'patrol', 0);
-    poseGuard(game, 'Viktor', 600, 220, 90, 'patrol', 20);
-    poseGuard(game, 'Nadia', 470, 120, 0, 'patrol', 0);
     poseGuard(game, 'Otto', 150, 160, 45, 'patrol', 0);
     poseGuard(game, 'Iris', 1130, 160, 135, 'patrol', 0);
     poseCameras(game);
@@ -69,7 +70,7 @@ export function stageShot(game, n) {
     game.alarm = 25;
     game.lives = 3;
     takeLoot(game, ['gem-0', 'gem-1', 'coin-0', 'coin-1', 'coin-2', 'bar-4', 'bar-5', 'coin-3', 'coin-4']);
-    posePlayer(game, 85, 365, 0, true);
+    posePlayer(game, 110, 365, 0, true);
     poseGuard(game, 'Otto', 180, 260, 270, 'patrol', 18);
     poseGuard(game, 'Marco', 340, 450, 180, 'patrol', 0);
     poseGuard(game, 'Lena', 640, 520, 90, 'patrol', 0);
@@ -85,7 +86,7 @@ export function stageShot(game, n) {
     game.alarm = 70;
     game.lives = 2;
     takeLoot(game, ['gem-0', 'gem-1', 'gem-2', 'gem-3', 'coin-0', 'coin-1', 'coin-2', 'coin-3', 'coin-4', 'coin-5', 'bar-0', 'bar-1', 'bar-4', 'bar-6']);
-    posePlayer(game, 640, 130, -90, false);
+    posePlayer(game, 640, 145, -90, false);
     game.player.vaultProgress = 0.65;
     poseGuard(game, 'Viktor', 640, 230, -90, 'suspicious', 78);
     poseGuard(game, 'Nadia', 760, 120, 180, 'patrol', 30);
