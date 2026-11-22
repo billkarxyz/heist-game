@@ -19,4 +19,10 @@ smoke bomb to break line of sight, and a lockpick for the vault.
 
 Open `game/index.html` in a desktop browser and play with keyboard and mouse:
 WASD / arrows to move, Shift to sneak, E to grab loot and crack the vault,
-F to toss a coin, Q for a smoke bomb, M to mute, R to restart.
+F to toss a coin, Q for a smoke bomb, M to mute, R to restart. Serve it
+locally first (ES modules need http, not file://):
+
+```
+python3 -m http.server 8080
+# then open http://localhost:8080/game/
+```
